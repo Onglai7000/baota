@@ -24,7 +24,8 @@ services:
     volumes:
       - www:/www
       - usr:/usr
-      - etc:/etc
+      - etc:/etc /var/run/docker.sock:/var/run/docker.sock:rw
+      - 
       - ${WEB_PATH}:/www/wwwroot:cached
       - ${BACKUP_PATH}:/www/backup
       - ${LOGS_PATH}:/www/wwwlogs
