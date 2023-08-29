@@ -13,7 +13,7 @@ RUN apt-get install -y wget \
 # install baota
 RUN set -eux \
     && wget -O install.sh ${BAOTA_INSTALL_PATH} \
-    && echo y | sh install.sh
+    && echo y | bash install.sh
 
 COPY app.sh /
 
