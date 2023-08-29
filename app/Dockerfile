@@ -1,14 +1,14 @@
-ARG CENTOS_VERSION
-FROM centos:${CENTOS_VERSION}
+ARG UBUNTU_VERSION
+FROM ubuntu:${UBUNTU_VERSION}
 LABEL maintainer="ifui <ifui@foxmail.com>"
 
 RUN groupadd -f www && useradd -g www www
 
 ARG BAOTA_INSTALL_PATH
 # install pkg
-RUN yum install -y wget \
-    && yum install -y ca-certificates \
-    && yum install -y gd
+RUN apt-get install -y wget \
+    && apt-get install -y ca-certificates \
+    && apt-get install -y gd
 
 # install baota
 RUN set -eux \
