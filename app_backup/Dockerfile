@@ -11,4 +11,4 @@ RUN chmod +x /app_backup/app_backup.sh \
     && chmod +x /app_backup/import.sh \
     && chmod +x /app_backup/export.sh
 
-CMD [ "sh", "/app_backup/app_backup.sh" ]
+CMD [ "bash", "/app_backup/app_backup.sh" ]
